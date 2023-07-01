@@ -73,25 +73,25 @@ class _ShoppingInformationPageState extends State<ShoppingInformationPage> {
                 VerticalLineChartTile(
                     value: 2, label: DateFormattersLocales.februarySimplified),
                 VerticalLineChartTile(
-                    value: 3, label: DateFormattersLocales.marchSimplified),
+                    value: 4, label: DateFormattersLocales.marchSimplified),
                 VerticalLineChartTile(
-                    value: 4, label: DateFormattersLocales.aprilSimplified),
+                    value: 5, label: DateFormattersLocales.aprilSimplified),
                 VerticalLineChartTile(
-                    value: 5, label: DateFormattersLocales.maySimplified),
+                    value: 2, label: DateFormattersLocales.maySimplified),
                 VerticalLineChartTile(
                     value: 6, label: DateFormattersLocales.juneSimplified),
                 VerticalLineChartTile(
-                    value: 7, label: DateFormattersLocales.julySimplified),
+                    value: 3, label: DateFormattersLocales.julySimplified),
                 VerticalLineChartTile(
-                    value: 8, label: DateFormattersLocales.augustSimplified),
+                    value: 5, label: DateFormattersLocales.augustSimplified),
                 VerticalLineChartTile(
-                    value: 9, label: DateFormattersLocales.septemberSimplified),
+                    value: 4, label: DateFormattersLocales.septemberSimplified),
                 VerticalLineChartTile(
-                    value: 10, label: DateFormattersLocales.octoberSimplified),
+                    value: 3, label: DateFormattersLocales.octoberSimplified),
                 VerticalLineChartTile(
-                    value: 11, label: DateFormattersLocales.novemberSimplified),
+                    value: 2, label: DateFormattersLocales.novemberSimplified),
                 VerticalLineChartTile(
-                    value: 12, label: DateFormattersLocales.decemberSimplified),
+                    value: 5, label: DateFormattersLocales.decemberSimplified),
               ],
             ),
           ],

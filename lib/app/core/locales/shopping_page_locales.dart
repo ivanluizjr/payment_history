@@ -1,3 +1,3 @@
 class ShoppingPageLocales {
-  static const String titleApp = 'DinDin Pay';
+  static const String titleApp = 'Histórico de Pagamentos';
 }

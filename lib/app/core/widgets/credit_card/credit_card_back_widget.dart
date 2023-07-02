@@ -26,7 +26,7 @@ class CreditCartBackWidget extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(
-            width: MediaQuery.of(context).size.width * 0.90,
+            width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 0.25,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),

@@ -13,11 +13,11 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'DinDin Pay',
+      title: 'Payment History',
       themeMode: ThemeMode.light,
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: AppColors.creditCardColor,
+        colorSchemeSeed: AppColors.greenAnil,
       ),
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,

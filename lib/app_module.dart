@@ -3,7 +3,6 @@ import 'package:dindin_pay/app/modules/shopping_information/shopping_information
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'app/core/http_dio_client/dio/http_dio_client_service_impl.dart';
 import 'app/core/services/config/environment.dart';
 import 'app/modules/splash/splash_module.dart';
 
@@ -14,13 +13,6 @@ class AppModule extends Module {
       (i) => Dio(
         BaseOptions(
           baseUrl: Environment().config.apiHost,
-        ),
-      ),
-    ),
-    Bind.singleton(
-      (i) => (
-        HttpDioClientServiceImpl(
-          dio: i(),
         ),
       ),
     ),

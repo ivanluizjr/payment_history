@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class CreditCardWidget extends StatelessWidget {
   final String name;
   final String cardNumber;
-  final String spent;
+  final double spent;
   final String available;
   final String memberSince;
   final String validThru;

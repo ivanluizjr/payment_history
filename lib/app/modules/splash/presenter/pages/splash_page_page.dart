@@ -38,9 +38,16 @@ class _SplashPagePageState extends State<SplashPagePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/logos/logo_dindin.png'),
-            const CircularProgressIndicator(
-              color: Colors.white,
+            Image.asset(
+              'assets/logos/logo_payment.png',
+              width: 200.0,
+              height: 200.0,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 40.0),
+              child: CircularProgressIndicator(
+                color: Colors.white,
+              ),
             ),
           ],
         ),

@@ -10,16 +10,16 @@ abstract class IGetClientInfoUsecase {
   });
 }
 
-class GetClientInfoUsecase implements IGetClientInfoUsecase {
-  final IShoppingInformationRepository repositoryClient;
+class GetClientInfoUsecaseImpl implements IGetClientInfoUsecase {
+  final IShoppingInformationRepository shoppingRepository;
 
-  GetClientInfoUsecase({required this.repositoryClient});
+  GetClientInfoUsecaseImpl({required this.shoppingRepository});
 
   @override
   Future<Either<IFailures, List<ClientInfoEntity>>> call({
     required ClientInfoEntity clientInfoEntity,
   }) async {
-    final response = await repositoryClient.getClientInfo(
+    final response = await shoppingRepository.getClientInfo(
       clientInfoEntity: clientInfoEntity,
     );
 

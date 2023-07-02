@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class ServiceLocatorService {
+class ServiceInjectorLocatorService {
   static T dependency<T extends Object>() {
     return Modular.get<T>();
   }

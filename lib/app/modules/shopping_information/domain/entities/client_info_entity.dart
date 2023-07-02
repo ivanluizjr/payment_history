@@ -8,4 +8,12 @@ class ClientInfoEntity {
     required this.cardNumber,
     required this.expirationDate,
   });
+
+  factory ClientInfoEntity.empty() {
+    return ClientInfoEntity(
+      cardNumber: '',
+      name: '',
+      expirationDate: DateTime(2023),
+    );
+  }
 }

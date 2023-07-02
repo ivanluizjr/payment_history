@@ -23,8 +23,11 @@ class ShoppingInformationRepositoryImpl
       final List<Map<String, dynamic>> result =
           await datasource.getClientInfo(clientInfoEntity: clientInfoEntity);
 
-      final List<ClientInfoEntity> clients =
-          result.map((map) => ClientInforMapper.fromMap(map)).toList();
+      final List<ClientInfoEntity> clients = result
+          .map(
+            (map) => ClientInforMapper.fromMap(map),
+          )
+          .toList();
 
       return Right(clients);
     } on HttpDioFailure catch (error) {

@@ -1,5 +1,6 @@
 import 'package:dindin_pay/app/core/locales/credit_card_front_locales.dart';
 import 'package:dindin_pay/app/core/utils/masks_formatters/mask_formatter.dart';
+import 'package:dindin_pay/app/core/value_objects/currency_vo.dart';
 import 'package:dindin_pay/app/core/widgets/text_widget.dart';
 import 'package:dindin_pay/app/modules/shopping_information/domain/entities/client_info_entity.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ import '../../theme/colors/app_colors.dart';
 class CreditCardFrontWidget extends StatelessWidget {
   final ClientInfoEntity? clientInfoEntity;
   final String cardNumber;
-  final String spent;
+  final double spent;
   final String available;
   const CreditCardFrontWidget({
     Key? key,
@@ -22,7 +23,7 @@ class CreditCardFrontWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.90,
+      width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.25,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -46,10 +47,7 @@ class CreditCardFrontWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10.0),
                 child: TextWidget(
                   text: MaskFormatter.maskNumberCreditCards(cardNumber),
-                  // MaskFormatter.maskNumberCreditCards(
-                  //   clientInfoEntity?.cardNumber ?? '',
-                  // ),
-                  fontSize: 14,
+                  fontSize: 18,
                   colorText: Colors.white,
                   fontWeight: FontWeight.w400,
                 ),
@@ -64,17 +62,26 @@ class CreditCardFrontWidget extends StatelessWidget {
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(
-              top: 30.0,
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 50.0,
               left: 10.0,
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextWidget(
+                const TextWidget(
                   text: CreditCardFrontLocales.spent,
-                  fontSize: 12,
+                  fontSize: 14,
                   colorText: Colors.white,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 200.0),
+                  child: TextWidget(
+                    text: CurrencyVO(spent).toString(),
+                    fontSize: 14,
+                    colorText: Colors.white,
+                  ),
                 )
               ],
             ),
@@ -85,64 +92,26 @@ class CreditCardFrontWidget extends StatelessWidget {
               left: 10.0,
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextWidget(
                   text: CreditCardFrontLocales.available,
-                  fontSize: 12,
+                  fontSize: 14,
                   colorText: Colors.white,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(right: 200.0),
+                  child: TextWidget(
+                    text: 'R\$ 200,00',
+                    fontSize: 14,
+                    colorText: Colors.white,
+                  ),
                 )
               ],
             ),
           ),
         ],
       ),
-      // Stack(
-      //   children: [
-      //     Positioned(
-      //       left: 30,
-      //       bottom: 30,
-      //       child: Row(
-      //         children: [
-      //           Padding(
-      //             padding: const EdgeInsets.only(left: 10),
-      //             child: Text(
-      //               cardNumber,
-      //               style: const TextStyle(
-      //                 fontSize: 16,
-      //                 color: Colors.white,
-      //               ),
-      //             ),
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //     Positioned(
-      //       left: 35,
-      //       top: 65,
-      //       child: Row(
-      //         children: [
-      //           Transform.rotate(
-      //             angle: 90 * math.pi / 180,
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //     Positioned(
-      //       right: 10.0,
-      //       top: 5.0,
-      //       child: Row(
-      //         children: [
-      //           Image.asset(
-      //             'assets/logos/logo_master_card.png',
-      //             width: 50.0,
-      //             height: 50.0,
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-
-      //   ],
-      // ),
     );
   }
 }

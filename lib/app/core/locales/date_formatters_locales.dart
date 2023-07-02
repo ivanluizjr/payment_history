@@ -38,4 +38,49 @@ class DateFormattersLocales {
   static const String fridaySimplified = 'Sex';
   static const String saturday = 'Sábado';
   static const String saturdaySimplified = 'Sab';
+
+  static const List<String> monthsSimplified = [
+    januarySimplified,
+    februarySimplified,
+    marchSimplified,
+    aprilSimplified,
+    maySimplified,
+    juneSimplified,
+    julySimplified,
+    augustSimplified,
+    septemberSimplified,
+    octoberSimplified,
+    novemberSimplified,
+    decemberSimplified
+  ];
+
+  static const Map<String, String> monthsSimplifiedToFull = {
+    'Jan': 'Janeiro',
+    'Fev': 'Fevereiro',
+    'Mar': 'Março',
+    'Abr': 'Abril',
+    'Mai': 'Maio',
+    'Jun': 'Junho',
+    'Jul': 'Julho',
+    'Ago': 'Agosto',
+    'Set': 'Setembro',
+    'Out': 'Outubro',
+    'Nov': 'Novembro',
+    'Dez': 'Dezembro',
+  };
+
+  static const List<String> fullMonths = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
+  ];
 }

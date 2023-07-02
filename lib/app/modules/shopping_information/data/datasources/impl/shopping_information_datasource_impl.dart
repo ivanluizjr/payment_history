@@ -16,6 +16,10 @@ class ShoppingInformationDatasourceImpl
   }) async {
     final response = await service.get(ApiLocales.clientInfoData);
 
+    if (response.data is List) {
+      return List<Map<String, dynamic>>.from(response.data);
+    }
+
     return response.data;
   }
 
@@ -24,6 +28,10 @@ class ShoppingInformationDatasourceImpl
     required PurchasesEntity purchasesEntity,
   }) async {
     final response = await service.get(ApiLocales.purchasesData);
+
+    if (response.data is List) {
+      return List<Map<String, dynamic>>.from(response.data);
+    }
 
     return response.data;
   }

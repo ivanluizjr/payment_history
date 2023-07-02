@@ -10,16 +10,16 @@ abstract class IGetPurchasesUsecase {
   });
 }
 
-class GetClientInfoUsecase implements IGetPurchasesUsecase {
-  final IShoppingInformationRepository purchasesRepository;
+class GetPurchaseUsecaseImpl implements IGetPurchasesUsecase {
+  final IShoppingInformationRepository shoppingRepository;
 
-  GetClientInfoUsecase({required this.purchasesRepository});
+  GetPurchaseUsecaseImpl({required this.shoppingRepository});
 
   @override
   Future<Either<IFailures, List<PurchasesEntity>>> call({
     required PurchasesEntity purchasesEntity,
   }) async {
-    final response = await purchasesRepository.getPurchases(
+    final response = await shoppingRepository.getPurchases(
       purchasesEntity: purchasesEntity,
     );
 
